@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Radio Canada', sans-serif !important;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #293241;
+    font-family: 'Radio Canada', sans-serif !important;
+    color: white;
+    overflow: auto;
+}
+
+button {
+    background-color: #fca311;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 12px;
+}
+
+.unk-btn {
+    background-color: rgba(51, 51, 51, 0);
+    border: white solid 1px;
+    padding: 7px 13px;
+    margin-top: 20px;
+    border-radius: 0px;
+    color: white;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.unk-btn:hover {
+    background-color: rgb(255, 255, 255);
+    border: white solid 1px;
+    padding: 7px 13px;
+    margin-top: 20px;
+    border-radius: 0px;
+    color: tomato;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+}
+
+.unk-btnt {
+    background-color: rgba(51, 51, 51, 0);
+    border: white solid 1px;
+    padding: 7px 13px;
+    margin-top: 20px;
+    border-radius: 0px;
+    color: white;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.unk-btnt:hover {
+    background-color: rgb(255, 255, 255);
+    border: white solid 1px;
+    padding: 7px 13px;
+    margin-top: 20px;
+    border-radius: 0px;
+    color: #293241;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+}
+
+.section {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+section {
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    height: 100%;
+    color: white;
+}
+
+section div {
+
+}
+
+.bigsmile {
+    font-size: 100px;
+}
+
+.unk-error {
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.section div {
+
+}
+
+.flex-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "article"
+    "footer";
+    grid-template-rows: 60px calc(100% - 60px - (53px + 25px + 25px)) calc(53px + 25px + 25px);
+    grid-template-columns: 100%;
+    height: 100vh;
+}
+
+.flex-container > .nav {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 20px 50px;
+    background-color: #262e3b;
+}
+
+.flex-container > .messages {
+    grid-area: article;
+}
+
+select {
+    padding:7px 10px;
+    background-color: #1e2530;
+    color: white;
+    border: none;
+    width: 300px;
+    border-radius: 12px;
+    outline: none;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    width: 97%;
+    padding: 10px 30px;
+    border-radius: 12px;
+    background-color: #262e3b;
+}
+
+input[type="text"] {
+    padding:7px 10px;
+    background-color: #1e2530;
+    color: white;
+    border: none;
+    width: 100%;
+    -webkit-border-top-left-radius: 12px;
+    -webkit-border-bottom-left-radius: 12px;
+    -moz-border-radius-topleft: 12px;
+    -moz-border-radius-bottomleft: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    outline: none;
+    font-size: 16px;
+}
+
+#send_message {
+    background-color: #1e2530;
+    border: none;
+    color: white;
+    padding:7px 20px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+}
+
+#send_message:hover {
+    background-color: #181e27;
+}
+
+.message-item {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    background-color: #262e3b;
+    max-width: 30%;
+    padding: 10px 15px;
+    word-wrap: break-word;
+    border-radius: 12px;
+    animation-name: show-animation;
+    animation-duration: 0.3s;
+}
+
+@keyframes show-animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.message-title {
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.message-date {
+    font-size: 15px;
+    color: rgb(184, 184, 184);
+    font-weight: 100;
+}
+
+.message-up {
+    margin-bottom: 7px;
+}
+
+.sa {
+    /* position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: calc(53px + 25px + 25px); */
+    grid-area: footer;
+}
+
+.messages {
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.notifications {
+    position: absolute;
+    top: 70px;
+    width: 15%;
+    right: 20px;
+}
+
+.notification {
+    background-color: tomato;
+    padding: 15px 7%;
+    border-radius: 12px;
+    width: 100%;
+    animation-name: show-animation-notification;
+    animation-duration: 7s;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes show-animation-notification {
+    from { opacity: 0; }
+    10% { opacity: 1; }
+    70% { opacity: 1; }
+    80% { opacity: 0; }
+    to { opacity: 0; display: none; }
+}
+
+.notification .notification-title {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.notification .notification-description {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.code {
+    background-color: #191e27;
+    padding: 5px 10px;
+    border-radius: 4px;
+    /* font-weight: 600; */
+    min-width: 100%;
+    font-family: Consolas, "Courier New", monospace !important;
+}
+
+/*********************************/
+/*
+    Login page
+*/
+/*********************************/
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.login-place {
+    background-color: #1e2530;
+    box-shadow: 0px 0px 44px 2px #1e2530;
+    padding: 30px 40px;
+    width: 25%;
+    min-height: 50%;
+    border-radius: 12px;
+}
+
+.login-place .login-title {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.login-form {
+    padding-top: 20px;
+}
+
+#login-email {
+    background-color: #262e3b;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#login-password {
+    background-color: #262e3b;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.login-form-submit {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-form-submit input[type="submit"] {
+    background-color: #262e3b;
+    border-radius: 12px;
+    border: none;
+    width: 50%;
+    height: 40px;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.login-form-submit input[type="submit"]:hover {
+    background-color: #232b38;
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1422px) {
+    .login-place {
+        background-color: #1e2530;
+        box-shadow: 0px 0px 44px 2px #1e2530;
+        padding: 30px 40px;
+        width: 50%;
+        min-height: 50%;
+        border-radius: 12px;
+    }
+}
+
+@media screen and (max-width: 688px) {
+    .login-place {
+        background-color: #1e2530;
+        box-shadow: 0px 0px 44px 2px #1e2530;
+        padding: 30px 40px;
+        width: 78%;
+        min-height: 50%;
+        border-radius: 12px;
+    }
+}
+
+.login-form .login-form-error {
+    color: red;
+}
+
+.login-form-error {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/*********************************/
+/*
+    Register page
+*/
+/*********************************/
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.register-place {
+    background-color: #1e2530;
+    box-shadow: 0px 0px 44px 2px #1e2530;
+    padding: 30px 40px;
+    width: 25%;
+    min-height: 50%;
+    border-radius: 12px;
+}
+
+.register-place .register-title {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.register-form {
+    padding-top: 20px;
+}
+
+#register-email {
+    background-color: #262e3b;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#register-password {
+    background-color: #262e3b;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.register-form-submit {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-form-submit input[type="submit"] {
+    background-color: #262e3b;
+    border-radius: 12px;
+    border: none;
+    width: 50%;
+    height: 40px;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.register-form-submit input[type="submit"]:hover {
+    background-color: #232b38;
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1422px) {
+    .register-place {
+        background-color: #1e2530;
+        box-shadow: 0px 0px 44px 2px #1e2530;
+        padding: 30px 40px;
+        width: 50%;
+        min-height: 50%;
+        border-radius: 12px;
+    }
+}
+
+@media screen and (max-width: 688px) {
+    .register-place {
+        background-color: #1e2530;
+        box-shadow: 0px 0px 44px 2px #1e2530;
+        padding: 30px 40px;
+        width: 78%;
+        min-height: 50%;
+        border-radius: 12px;
+    }
+}
+
+.register-form .register-form-error {
+    color: red;
+}
+
+.register-form-error {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#register-username {
+    background-color: #262e3b;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+/********************************/
+/*
+    Thanks for register
+*/
+/********************************/
+
+.thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.thanks-title {
+    font-size: 52px;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.thanks-desc {
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.thanks-button {
+    text-align: center;
+}
+
+.thanks-button button {
+    background-color: rgba(51, 51, 51, 0);
+    border: white solid 1px;
+    padding: 7px 13px;
+    margin-top: 10px;
+    border-radius: 0px;
+    color: white;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.thanks-button button:hover {
+    background-color: rgb(255, 255, 255);
+    border: white solid 1px;
+    padding: 7px 13px;
+    transform: translateY(-5px);
+    border-radius: 0px;
+    color: #293241;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+}
+
+/********************************/
+/*
+    404 Site
+*/
+/********************************/
+
+.four404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.four404-place {
+    text-align: center;
+}
+
+.four404-title-span {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.four404-image {
+    margin-bottom: 10px;
+}
+
+.four404-image img {
+    border-radius: 24px;
+    width: 500px;
+}
+
+.four404-title-desc {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+/********************************/
+/*
+    Home
+*/
+/********************************/
+
+.home-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 20px 50px;
+    background-color: #262e3b;
+}
+
+.home-nav ul li {
+    display: inline-block;   
+}
+
+.home-nav ul {
+    list-style: none;
+}
+
+.home-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+}
+
+.home-nav ul li a:hover {
+    color: rgb(211, 211, 211);
+    text-decoration: none;
+    padding: 0px 10px;
+    transition: all 0.2s ease-in-out;
+    font-weight: 100;
+}
+
+.home-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: calc(100hv - 60px);
+    background-image: url(/public/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.home-main div {
+    text-align: center;
+}
+
+.home-title {
+    font-size: 57px;
+    font-weight: 900;
+}
+
+.home-desc {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.home-body {
+    overflow: hidden;
+}

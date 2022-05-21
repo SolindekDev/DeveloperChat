@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeveloperChat</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body class="body">
+    <div class="notifications">
+        <!-- <div class="notification">
+            <div class="notification-title">Cooldown bro...</div>
+            <div class="notification-description">You are sending messages too fasttt! Wait 2 seconds before sending another message.</div>
+        </div> -->
+    </div>
+    <section class="section">
+        <div>
+            <span class="unk-error">Unknown Error</span><br>
+            <span>Can't connect to server! Please try again or report this error on our discord server.</span><br>
+            <button class="unk-btn">DISCORD SERVER</button>
+        </div>
+    </section>
+    <div class="flex-container">
+        <header class="nav">
+            <div class="logo">
+                <span>DeveloperChat</span>
+            </div>
+            <div class="channel-change">
+                <select name="channel" id="channel">
+                    <option value="none" selected>None</option>
+                    <option value="general">General</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="java">Java</option>
+                    <option value="go">GO</option>
+                </select>
+                <!-- <button id="update_channel">Update channel</button> -->
+            </div>
+            <div class="user">
+                <span id="user-auth">You are: </span>
+            </div>
+        </header>
+        <article class="messages">
+            <section>
+                <div>
+                    <span class="unk-error">Select the channel</span><br>
+                    <span>To talk with someone just select the channel that's you interested in.</span><br>
+                </div>
+            </section>
+        </article>
+        <!-- <div class="select">
+            <section>
+                <div>
+                    <span class="unk-error">Select the channel</span><br>
+                    <span>To talk with someone just select the channel that's you interested in.</span><br>
+                </div>
+            </section>
+        </div> -->
+        <footer class="sa">
+            <!-- <div class="input">
+                <input type="text" name="messageContent" id="message_content">
+                <input type="button" id="send_message" value="Send">
+            </div> -->
+        </footer>
+    </div>
+    <script src="/public/client.js"></script>
+</body>
+</html>

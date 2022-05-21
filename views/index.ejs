@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeveloperChat - Home</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body class="body home-body">
+    <header class="home-nav">
+        <div class="logo">
+            <span>DeveloperChat</span>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/soon">About</a></li>
+                <li><a href="https://solindek.tech/">Creator</a></li>
+                <li><a href="/soon">Documentation</a></li>
+            </ul>
+        </div>
+        <div class="acc">
+            <% if (account == null) { %>
+                <ul>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            <% } else { %>
+                <ul>
+                    <li><a href="/client">Go to app</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            <% } %>
+        </div>
+    </header>
+    <section class="home-main">
+        <div>
+            <span class="home-title">DeveloperChat</span><br>
+            <span class="home-desc">Programming might be hard, but we are here to help you!</span>
+            <div class="thanks-button" style="padding-top: 10px;">
+                <% if (account == null) { %>
+                        <a href="/register">
+                            <button>
+                                REGISTER
+                            </button>
+                        </a>
+                        <a href="/login">
+                            <button>
+                                LOGIN
+                            </button>
+                        </a>
+                <% } else { %>
+                    <ul>
+                        <a href="/client">
+                            <button>
+                                GO TO APP
+                            </button>
+                        </a>
+                        <a href="/logout">
+                            <button>
+                                LOGOUT
+                            </button>
+                        </a>
+                    </ul>
+                <% } %>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
